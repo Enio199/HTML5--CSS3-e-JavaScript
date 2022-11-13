@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem vota no brasil</title>
+    <style>
+        #res{
+            width: 300px;
+            height: 250px;
+            background-color: darkgreen;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você pode votar? Descrubra</h1>
+    <p>Digite sua idade no campo abaixo e veja se pode votar</p>
+    <input type="number" name="" id="idade">
+    <button id="valor">Testar</button>
+
+    <div id="res">
+        <p>Resultado</p>
+    </div>
+
+    <script>
+        var idade = window.document.querySelector('input#idade')
+        var valor = window.document.querySelector('button#valor')
+        var res = window.document.querySelector('div#res')
+
+        valor.addEventListener('click', clicar)
+
+        function clicar() {
+            var ida = Number(idade.value)
+            res.innerHTML = `<p>Sua idade é de ${ida} anos</p>`
+
+            if(ida > 17) {
+                res.innerHTML += `Voto é obrigatório`
+            }
+
+            else {
+                if (ida > 15 && ida < 18) {
+                    res.innerHTML += `<P>Voto facutativo</P>`
+                }
+                else {
+                    res.innerHTML += `ASSIM, NÃO PODE VOTAR`
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

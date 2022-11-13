@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de multa</title>
+</head>
+<body>
+    <h1>Sistemas de multa</h1>
+    <input type="number" name="" id="vel">
+    <button id="consulta">Consulta</button>
+
+    <div id="res">
+        resultado
+    </div>
+    
+</body>
+    <script>
+        var vel = window.document.getElementById('vel')
+        var consulta = window.document.getElementById('consulta')
+        var res = window.document.getElementById('res')
+
+        consulta.addEventListener('click', clicou)
+
+        function clicou() {
+            var km = Number(vel.value)
+            res.innerHTML = `<p>Sua velocidade atual é de ${km} KM</p>`
+
+            if (km > 120) {
+                res.innerHTML += `<p>Você foi multado por excesso de velocidade</p>`
+            }
+            
+            res.innerHTML += `<p>Dirija sempre com o sinto de sgurança</p>`
+        }
+    </script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        #res{
+            width: 300px;
+            height: 100px;
+            background-color: darkgreen;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        #nacionalidade {
+            border-color: rgb(191, 191, 255);
+            border-radius: 6px;
+            box-shadow: 1px 2px 3px blue;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de nacionalidade</h1>
+    <p>Qual país você nasceu</p>
+    <input type="text" name="nac" id="nacionalidade">
+    <button id="valor">Saiba agora</button>
+
+    <div id="res">
+        Resultado
+    </div>
+</body>
+    <script>
+        var nacionalidade = window.document.getElementById('nacionalidade')
+        var cliq = window.document.getElementById('valor')
+        var res = window.document.querySelector('div#res')
+
+        cliq.addEventListener('click', clicar)
+
+        function clicar() {
+            var nac = String(nacionalidade.value)
+
+            if (nac == 'Brasil' || nac == 'brasil') {
+                res.innerHTML = `<p>Você é Brasileiro(a) Nato(a)</p>`
+            }
+
+            else {
+                res.innerHTML = `<p>Você é Extrangeira</p>`
+            }
+        }
+    </script>
+</html>
