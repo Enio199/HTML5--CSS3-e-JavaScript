@@ -8,4 +8,6 @@ Desafio do dark mode
 4. Se os elementos possuirem a classe dark-mode, modifique seus estilos. Caso contrário, volte os estilos para o original
 
 
+### **Veja o exemplo abaixo**
+
 ![exemplo](Dark%20mode.gif)
